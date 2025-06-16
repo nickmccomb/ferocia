@@ -13,6 +13,7 @@ import { calculateInterest, getInvestmentTerm } from "@/helpers/calculations";
 import { useCallback, useState } from "react";
 
 import { Button } from "@/ui/button";
+import { CURRENCY } from "@/helpers/currency";
 import { Card } from "@/ui/card";
 import { Input } from "@/ui/input";
 import { Label } from "@radix-ui/react-label";
@@ -110,7 +111,7 @@ export const Calculator = () => {
           <b>
             {Intl.NumberFormat("en-AU", {
               style: "currency",
-              currency: "AUD",
+              currency: CURRENCY.AUD,
               maximumFractionDigits: 0,
               roundingMode: "floor",
             }).format(startingDeposit + interestEarned)}
@@ -122,7 +123,7 @@ export const Calculator = () => {
           <b>
             {Intl.NumberFormat("en-AU", {
               style: "currency",
-              currency: "AUD",
+              currency: CURRENCY.AUD,
               maximumFractionDigits: 0,
               roundingMode: "floor",
             }).format(interestEarned)}
