@@ -1,5 +1,7 @@
 import { ICalculateInterest } from "@/types/calculations";
 
+// NOTE: I used Google to figure out how to do these calculations
+
 export const calculateInterest = ({
   startingDeposit,
   interestRate,
