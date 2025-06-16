@@ -24,3 +24,14 @@ export const calculateInterest = ({
       return 0;
   }
 };
+
+export const getInvestmentTerm = (investmentTermInMonths: number) => {
+  const years = Math.floor(investmentTermInMonths / 12);
+  const months = investmentTermInMonths % 12;
+
+  if (years === 0) return `${months} month${months === 1 ? "" : "s"}`;
+  if (months === 0) return `${years} year${years === 1 ? "" : "s"}`;
+  return `${years} year${years === 1 ? "" : "s"}, ${months} month${
+    months === 1 ? "" : "s"
+  }`;
+};
