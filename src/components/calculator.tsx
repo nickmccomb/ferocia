@@ -56,7 +56,10 @@ export const Calculator = () => {
         />
 
         {startingDeposit <= 0 && (
-          <span className="text-red-500 text-sm mt-1">
+          <span
+            data-testid="deposit-error"
+            className="text-red-500 text-sm mt-1"
+          >
             Deposit must be greater than $0
           </span>
         )}
