@@ -19,3 +19,6 @@ If you would like to run tests:
 ```bash
 npm test
 ```
+
+This is how the app looks when running:
+![Screenshot of the application](screenshot.png)
